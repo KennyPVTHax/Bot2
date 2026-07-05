@@ -17,7 +17,7 @@ from telebot import types
 import threading
 
 # ==================== CONFIG ====================
-BOT_TOKEN = "8821349017:AAGdWfpglDu67brDl3kfpWJ4OB1OBfH1fVc"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 ADMIN_IDS = [8935807032]
 
 # Setup logging
@@ -474,7 +474,7 @@ def main():
     ╚═══════════════════════════════════════════════╝
     """)
     
-    print(f"✅ Bot starting with token: {BOT_TOKEN[:10]}...")
+    print(f"✅ Bot starting...")
     print(f"✅ Admin ID: {ADMIN_IDS[0]}")
     
     try:
